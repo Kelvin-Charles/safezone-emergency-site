@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import PageHero from '../components/PageHero';
+import { updateSEO, addStructuredData } from '../utils/SEO';
 
 const serviceCategories = [
   {
@@ -357,6 +358,60 @@ const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [showBookingModal, setShowBookingModal] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
+
+  // SEO configuration for Services page
+  useEffect(() => {
+    updateSEO({
+      title: 'Our Services - IT Solutions & Training | Safezone Tech',
+      description: 'Comprehensive IT solutions including cloud services, software development, cybersecurity, ICT training, and IT consulting. Tailored services to empower your business in Tanzania.',
+      keywords: 'IT services Tanzania, cloud services, software development, ICT training, cybersecurity, IT consulting, web development, network solutions, database management, Tanzania',
+      url: window.location.href
+    });
+
+    addStructuredData({
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      serviceType: 'IT Services and Training',
+      provider: {
+        '@type': 'Organization',
+        name: 'Safezone Tech'
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Tanzania'
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'IT Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cloud Services',
+              description: 'Expert cloud solutions to scale your business efficiently'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Software Development',
+              description: 'Custom software solutions tailored to your unique needs'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'ICT Training',
+              description: 'Empowering professionals with cutting-edge skills'
+            }
+          }
+        ]
+      }
+    });
+  }, []);
 
   const filteredServices = selectedCategory === 'all' 
     ? serviceCategories.flatMap(cat => cat.services)

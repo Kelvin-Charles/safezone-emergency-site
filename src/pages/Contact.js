@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import PageHero from '../components/PageHero';
+import { updateSEO, addStructuredData } from '../utils/SEO';
 
 // Internal components
 const SocialIcon = ({ type, url }) => {
@@ -326,6 +327,37 @@ const MapSection = () => {
 
 // Main Contact Component
 const Contact = () => {
+  // SEO configuration for Contact page
+  useEffect(() => {
+    updateSEO({
+      title: 'Contact Us - Get in Touch | Safezone Tech Tanzania',
+      description: 'Contact Safezone Tech for IT services, cloud solutions, software development, and ICT training in Arusha, Tanzania. Phone: +255615898768 | Email: info@safezonetz.com',
+      keywords: 'contact Safezone Tech, IT services Arusha, IT company Tanzania, Safezone Tech contact, IT consultation Tanzania',
+      url: window.location.href
+    });
+
+    addStructuredData({
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      name: 'Contact Safezone Tech',
+      description: 'Get in touch with Safezone Tech for IT services and training',
+      mainEntity: {
+        '@type': 'Organization',
+        name: 'Safezone Tech',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Near Clock Tower',
+          addressLocality: 'Arusha',
+          addressRegion: 'Arusha',
+          postalCode: '23109',
+          addressCountry: 'TZ'
+        },
+        telephone: '+255615898768',
+        email: 'info@safezonetz.com'
+      }
+    });
+  }, []);
+
   const contactInfo = [
     { icon: 'location', title: 'Our Location', content: 'Near Clock Tower, Arusha, Tanzania, Postal Code: 23109, P.O.BOX 10344' },
     { icon: 'phone', title: 'Phone Number', content: '+255615898768' },

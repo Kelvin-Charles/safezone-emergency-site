@@ -1,8 +1,14 @@
 # https://www.robotstxt.org/robotstxt.html
 # Robots configuration for Safezone Tech
+# Website: https://safezonetz.com
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /api/
 
-# Add your sitemap URL here when available, for example:
-# Sitemap: https://www.example.com/sitemap.xml
+# Sitemap location (update with your actual domain)
+Sitemap: https://safezonetz.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1

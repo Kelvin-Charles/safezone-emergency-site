@@ -4,9 +4,15 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { updateSEO } from './utils/SEO';
 
-// Global default title for the SPA
-document.title = 'Safezone Tech - Digital Solutions & ICT Training in Africa';
+// Set default SEO for initial page load
+updateSEO({
+  title: 'Safezone Tech - Digital Solutions & ICT Training in Tanzania',
+  description: 'Safezone Tech delivers cloud services, software development, cybersecurity and ICT training to empower African businesses through digital innovation. Based in Arusha, Tanzania.',
+  keywords: 'Safezone Tech, IT services Tanzania, cloud services, software development, ICT training, cybersecurity, IT consulting, Arusha Tanzania',
+  url: typeof window !== 'undefined' ? window.location.href : 'https://safezonetz.com'
+});
 
 ReactDOM.render(
   <React.StrictMode>

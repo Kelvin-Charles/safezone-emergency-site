@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PageHero from '../components/PageHero';
 import { useLocation } from 'react-router-dom';
+import { updateSEO, addStructuredData } from '../utils/SEO';
 
 // Background Effects Component
 const BackgroundEffects = () => {
@@ -33,6 +34,29 @@ const Booking = () => {
   const queryParams = new URLSearchParams(location.search);
   const categoryParam = queryParams.get('category');
   const serviceParam = queryParams.get('service');
+
+  // SEO configuration for Booking page
+  useEffect(() => {
+    updateSEO({
+      title: 'Book IT Services & Training | Safezone Tech Tanzania',
+      description: 'Book IT services, cloud solutions, software development, and ICT training with Safezone Tech. Schedule a consultation for your business needs in Tanzania.',
+      keywords: 'book IT services, IT consultation booking, Safezone Tech booking, schedule IT training, IT services Tanzania',
+      url: window.location.href
+    });
+
+    addStructuredData({
+      '@context': 'https://schema.org',
+      '@type': 'Reservation',
+      reservationFor: {
+        '@type': 'Service',
+        name: 'IT Services and Training',
+        provider: {
+          '@type': 'Organization',
+          name: 'Safezone Tech'
+        }
+      }
+    });
+  }, []);
 
   // Form state with URL parameters included
   const [formData, setFormData] = useState({
