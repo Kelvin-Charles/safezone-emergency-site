@@ -99,10 +99,10 @@ const Home = () => {
         {/* Stats Section with Animated Numbers */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-24">
           {[
-            { number: '100+', label: 'Projects Completed' },
-            { number: '300+', label: 'Happy Clients' },
-            { number: '400+', label: 'Trained Professionals' },
-            { number: '30+', label: 'Years Experience' }
+            { number: '10+', label: 'Projects Completed' },
+            { number: '25+', label: 'Happy Clients' },
+            { number: '50+', label: 'Trained Professionals' },
+            { number: '5+', label: 'Years Experience' }
           ].map((stat, index) => (
             <div key={index} className="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-3">
