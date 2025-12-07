@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 // Global default title for the SPA
-document.title = 'MicroSkills IT - Digital Solutions & ICT Training in Africa';
+document.title = 'Safezone Tech - Digital Solutions & ICT Training in Africa';
 
 ReactDOM.render(
   <React.StrictMode>

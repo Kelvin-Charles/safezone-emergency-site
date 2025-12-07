@@ -1,5 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
-# Robots configuration for MicroSkills IT
+# Robots configuration for Safezone Tech
 
 User-agent: *
 Allow: /

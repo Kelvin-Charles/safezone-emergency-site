@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   // Home page specific SEO (title + meta description)
   useEffect(() => {
-    const title = 'MicroSkills IT | Empowering African Businesses Through Digital Innovation';
+    const title = 'Safezone Tech | Empowering African Businesses Through Digital Innovation';
     const description =
-      'MicroSkills IT provides cloud services, software development, cybersecurity and ICT training to help African businesses achieve digital transformation.';
+      'Safezone Tech provides cloud services, software development, cybersecurity and ICT training to help African businesses achieve digital transformation.';
 
     document.title = title;
 
@@ -47,7 +47,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-8 max-w-xl backdrop-blur-sm bg-black/5 p-4 rounded-lg">
-              MicroSkills IT delivers cutting-edge technology solutions and professional training to drive your business forward
+              Safezone Tech delivers cutting-edge technology solutions and professional training to drive your business forward
             </p>
             <div className="space-x-4 backdrop-blur-sm bg-black/5 p-4 rounded-lg inline-block">
               <Link 
@@ -145,7 +145,7 @@ const Home = () => {
         {/* Why Choose Us with Interactive Icons */}
         <div className="mb-24 py-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl">
           <h2 className="text-4xl font-bold mb-16 text-center">
-            Why Choose <span className="text-primary">MicroSkills IT</span>
+            Why Choose <span className="text-primary">Safezone Tech</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 container mx-auto px-4">
             {[
@@ -191,7 +191,7 @@ const Home = () => {
                 name: "Institute of Accountancy Arusha",
                 role: "System Administrator",
                 image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-                quote: "MicroSkills IT transformed our business operations with their cloud solutions. Their expertise and professional approach exceeded our expectations.",
+                quote: "Safezone Tech transformed our business operations with their cloud solutions. Their expertise and professional approach exceeded our expectations.",
                 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHFsZ1w4OcXbm6lCESr5to7oujgdkiNA-Cmw&s"
               },
               {
@@ -205,7 +205,7 @@ const Home = () => {
                 name: "Tanzania Revenue Authority",
                 role: "Chief Information Officer",
                 image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-                quote: "MicroSkills IT helped us modernize our systems with cutting-edge solutions that improved our operational efficiency.",
+                quote: "Safezone Tech helped us modernize our systems with cutting-edge solutions that improved our operational efficiency.",
                 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDXoAnb3o72qfFigBAndSH89WO-obs5kMCKQ&s"
               },
               {
@@ -226,7 +226,7 @@ const Home = () => {
                 name: "Exim Bank Tanzania",
                 role: "IT Security Manager",
                 image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-                quote: "MicroSkills IT's expertise in banking security and infrastructure has been invaluable for our digital transformation journey.",
+                quote: "Safezone Tech's expertise in banking security and infrastructure has been invaluable for our digital transformation journey.",
                 logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhiISgWbctVtn0NBWAqkd3-1EwhxECzR7J5w&s"
               }
             ].map((testimonial, index) => (

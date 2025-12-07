@@ -43,7 +43,7 @@ const SocialIcon = ({ type, url }) => {
       href={url} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+      className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110 border border-gray-200"
     >
       {getIcon()}
     </a>
@@ -86,10 +86,10 @@ const ContactInfoCard = ({ icon, title, content }) => {
   };
 
   return (
-    <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1">
-      <div className="text-blue-400 text-2xl mb-3">{getIcon()}</div>
-      <h3 className="text-white font-semibold text-lg mb-2">{title}</h3>
-      <p className="text-gray-300">{content}</p>
+    <div className="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-sm rounded-xl p-6 border border-primary/20 hover:border-primary/40 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      <div className="text-primary text-2xl mb-3">{getIcon()}</div>
+      <h3 className="text-gray-800 font-semibold text-lg mb-2">{title}</h3>
+      <p className="text-gray-700">{content}</p>
     </div>
   );
 };
@@ -98,14 +98,14 @@ const FaqItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white/10 border border-white/20 rounded-xl overflow-hidden mb-4">
+    <div className="bg-white border border-gray-200 rounded-xl overflow-hidden mb-4 shadow-md hover:shadow-lg transition-shadow duration-300">
       <button 
-        className="w-full text-left p-6 focus:outline-none flex justify-between items-center"
+        className="w-full text-left p-6 focus:outline-none flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-white text-lg font-medium">{question}</span>
+        <span className="text-gray-800 text-lg font-semibold">{question}</span>
         <span className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-primary">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </span>
@@ -113,8 +113,8 @@ const FaqItem = ({ question, answer }) => {
       <div 
         className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
       >
-        <div className="text-gray-300 px-6 pb-6">
-          <p>{answer}</p>
+        <div className="text-gray-700 px-6 pb-6 bg-gray-50">
+          <p className="leading-relaxed">{answer}</p>
         </div>
       </div>
     </div>
@@ -198,11 +198,11 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-white/15 backdrop-blur-lg rounded-2xl p-8 shadow-xl border border-white/20 animate-fadeIn">
-      <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
+    <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 animate-fadeIn">
+      <h2 className="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-6">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
             <input
               type="text"
               id="name"
@@ -210,62 +210,62 @@ const ContactForm = () => {
             ref={nameInputRef}
             value={formState.name}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300`}
+            className={`w-full px-4 py-3 bg-gray-50 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300`}
             placeholder="John Doe"
           />
-          {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
+          {errors.name && <p className="mt-1 text-sm text-red-600 font-medium">{errors.name}</p>}
           </div>
         
         <div className="mb-6">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
             <input
               type="email"
               id="email"
               name="email"
             value={formState.email}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/5 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300`}
+            className={`w-full px-4 py-3 bg-gray-50 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300`}
             placeholder="john@example.com"
           />
-          {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
+          {errors.email && <p className="mt-1 text-sm text-red-600 font-medium">{errors.email}</p>}
           </div>
         
         <div className="mb-6">
-          <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+          <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
             <input
               type="text"
               id="subject"
               name="subject"
             value={formState.subject}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/5 border ${errors.subject ? 'border-red-500' : 'border-white/10'} rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300`}
+              className={`w-full px-4 py-3 bg-gray-50 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300`}
             placeholder="How can we help you?"
           />
-          {errors.subject && <p className="mt-1 text-sm text-red-500">{errors.subject}</p>}
+          {errors.subject && <p className="mt-1 text-sm text-red-600 font-medium">{errors.subject}</p>}
           </div>
         
         <div className="mb-6">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Your Message</label>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
             <textarea
               id="message"
               name="message"
             value={formState.message}
             onChange={handleChange}
             rows="5"
-            className={`w-full px-4 py-3 bg-white/5 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300`}
+              className={`w-full px-4 py-3 bg-gray-50 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300`}
             placeholder="Write your message here..."
             ></textarea>
-          {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
+          {errors.message && <p className="mt-1 text-sm text-red-600 font-medium">{errors.message}</p>}
           </div>
         
             <button
               type="submit"
           disabled={formStatus === 'sending' || formStatus === 'success'}
-          className={`w-full py-3 px-6 rounded-lg font-medium text-white ${
+          className={`w-full py-3 px-6 rounded-lg font-semibold text-white ${
             formStatus === 'success' 
               ? 'bg-green-600 hover:bg-green-700' 
-              : 'bg-blue-600 hover:bg-blue-700'
-          } transition-all duration-300 flex items-center justify-center hover:scale-[1.02] active:scale-[0.98]`}
+              : 'bg-primary hover:bg-primary/90'
+          } transition-all duration-300 flex items-center justify-center hover:scale-[1.02] active:scale-[0.98] shadow-md`}
         >
           {formStatus === 'sending' ? (
             <>
@@ -293,7 +293,7 @@ const ContactForm = () => {
             </button>
         
         {formStatus === 'error' && (
-          <p className="mt-4 text-center text-red-500">
+          <p className="mt-4 text-center text-red-600 font-medium">
             There was an error sending your message. Please try again.
           </p>
         )}
@@ -328,8 +328,8 @@ const MapSection = () => {
 const Contact = () => {
   const contactInfo = [
     { icon: 'location', title: 'Our Location', content: 'Near Clock Tower, Arusha, Tanzania, Postal Code: 23109, P.O.BOX 10344' },
-    { icon: 'phone', title: 'Phone Number', content: '+255 764 021 233' },
-    { icon: 'email', title: 'Email Address', content: 'info@microskills.co.tz' },
+    { icon: 'phone', title: 'Phone Number', content: '+255615898768' },
+    { icon: 'email', title: 'Email Address', content: 'info@safezonetz.com' },
     { icon: 'clock', title: 'Working Hours', content: 'Mon - Fri: 9:00 AM - 6:00 PM' },
   ];
 
@@ -427,10 +427,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="animate-slideInLeft">
-            <div className="bg-white rounded-2xl p-8 shadow-xl">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
-              <ContactForm />
-            </div>
+            <ContactForm />
           </div>
           
           {/* Contact Information */}
@@ -478,7 +475,7 @@ const Contact = () => {
           <div className="relative z-10">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Skills?</h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
-              Join thousands of satisfied clients who have enhanced their digital capabilities with MicroSkills.
+              Join thousands of satisfied clients who have enhanced their digital capabilities with Safezone Tech.
               Start your journey today!
             </p>
             <a
