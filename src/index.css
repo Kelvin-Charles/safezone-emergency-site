@@ -1,0 +1,287 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Add these styles for the shine effect */
+.shine-text {
+  background: linear-gradient(
+    to right,
+    #ffffff 20%,
+    #ffffff 40%,
+    #64B5F6 50%,
+    #ffffff 60%,
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: #ffffff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.shine-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shine-sweep 3s linear infinite;
+}
+
+@keyframes shine-sweep {
+  to {
+    left: 200%;
+  }
+}
+
+/* Add these new styles for the navbar logo shine effect */
+.shine-text-nav {
+  background: linear-gradient(
+    to right,
+    #ffffff 15%,
+    #ffffff 35%,
+    #90CAF9 50%,
+    #ffffff 65%,
+    #ffffff 85%
+  );
+  background-size: 200% auto;
+  color: #ffffff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.25rem 0;
+  text-shadow: 
+    0 0 1px rgba(255, 255, 255, 0.5),
+    0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced text shadow effect */
+.shine-text-nav::after {
+  content: 'MicroSkills';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  color: rgba(255, 255, 255, 0.2);
+  filter: blur(3px);
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.4),
+    0 0 12px rgba(144, 202, 249, 0.6);
+}
+
+/* Smoother animation */
+@keyframes shine {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* Add this new style for extra emphasis */
+.shine-text-nav:hover {
+  animation: shine 2s linear infinite;
+  text-shadow: 
+    0 0 2px rgba(255, 255, 255, 0.7),
+    0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+/* Add these global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-up animation */
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effect for cards */
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+/* Responsive container */
+.container {
+  @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
+}
+
+/* Responsive text */
+.responsive-text {
+  @apply text-base sm:text-lg lg:text-xl;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full hover:bg-primary/70 transition-colors;
+}
+
+/* Add these new styles for the hero section */
+.hero-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.9) 100%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero-text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content-wrapper {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/* Add smooth transition for hover effects */
+.hero-content {
+  transition: transform 0.3s ease-out;
+}
+
+.hero-content:hover {
+  transform: translateX(10px);
+}
+
+/* Optional: Add a subtle vignette effect */
+.hero-vignette::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+/* Update navbar-specific styles */
+.nav-link-hover {
+  @apply relative overflow-hidden font-bold;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.nav-link-hover::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-white transform scale-x-0 transition-transform duration-300 origin-left shadow-lg;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.nav-link-hover:hover::after {
+  @apply scale-x-100;
+}
+
+/* Add stronger glow effect for active links */
+.active-nav-link {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+  font-weight: 800;
+}
+
+/* Enhanced mobile menu items */
+.mobile-menu-item {
+  @apply block px-4 py-3 text-white font-bold text-lg hover:text-white hover:bg-white/15 transition-all duration-300 rounded-lg;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.mobile-menu-item.active {
+  @apply bg-white/20 font-extrabold;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+/* Enhanced mobile menu animation */
+.mobile-menu-enter {
+  max-height: 0;
+  opacity: 0;
+}
+
+.mobile-menu-enter-active {
+  max-height: 1000px;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.mobile-menu-exit {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.mobile-menu-exit-active {
+  max-height: 0;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+/* Replace with a CSS-based pattern instead */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+# Robots configuration for MicroSkills IT
+
+User-agent: *
+Allow: /
+
+# Add your sitemap URL here when available, for example:
+# Sitemap: https://www.example.com/sitemap.xml
