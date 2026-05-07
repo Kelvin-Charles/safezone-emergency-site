@@ -1,0 +1,15 @@
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: safezone_Site
+    ports:
+      - "8678:8678"
+    networks:
+      - safezone_site_network # <--- Change this to the name you found in Step 1
+    restart: always
+
+networks:
+  safezone_site_network:
+    external: true
