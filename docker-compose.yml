@@ -3,11 +3,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      network: host
     container_name: safezone_Site
     ports:
-      - "8678:8678"
+      - "8678:80"
     networks:
-      - safezone_site_network # <--- Change this to the name you found in Step 1
+      - safezone_site_network
     restart: always
 
 networks:
