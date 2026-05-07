@@ -58,6 +58,7 @@ const Navbar = () => {
             {[
               { path: '/', label: 'Home' },
               { path: '/services', label: 'Services' },
+              { path: '/digital-marketing', label: 'Digital Marketing' },
               { path: '/booking', label: 'Book Now' },
               { path: '/news', label: 'News' },
               { path: '/contact', label: 'Contact' }
@@ -92,6 +93,7 @@ const Navbar = () => {
             {[
               { path: '/', label: 'Home' },
               { path: '/services', label: 'Services' },
+              { path: '/digital-marketing', label: 'Digital Marketing' },
               { path: '/booking', label: 'Book Now' },
               { path: '/news', label: 'News' },
               { path: '/contact', label: 'Contact' }

@@ -257,6 +257,54 @@ const serviceCategories = [
     ]
   },
   {
+    id: 'digital-marketing',
+    name: 'Digital Marketing',
+    services: [
+      {
+        id: 200,
+        title: 'Search Engine Optimization (SEO)',
+        description: 'Boost your online visibility and organic traffic with proven SEO strategies tailored for your business in Tanzania and beyond.',
+        duration: 'Ongoing',
+        price: 'Starting from $300/month',
+        image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        features: [
+          'Keyword Research & Strategy',
+          'On-Page & Technical SEO',
+          'Content Optimization',
+          'Monthly Performance Reports'
+        ]
+      },
+      {
+        id: 201,
+        title: 'Google Ads Management',
+        description: 'Drive targeted traffic and maximize ROI with expertly managed Google Ads campaigns that reach your ideal customers.',
+        duration: 'Ongoing',
+        price: 'Starting from $500/month + Ad Spend',
+        image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        features: [
+          'Campaign Setup & Strategy',
+          'Ad Copywriting & Creative',
+          'Bid Management & Optimization',
+          'Conversion Tracking & Reporting'
+        ]
+      },
+      {
+        id: 202,
+        title: 'Meta Ads (Facebook & Instagram)',
+        description: 'Reach your target audience on Facebook and Instagram with compelling ad campaigns that drive real business results.',
+        duration: 'Ongoing',
+        price: 'Starting from $400/month + Ad Spend',
+        image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+        features: [
+          'Audience Targeting & Segmentation',
+          'Creative Ad Design',
+          'Campaign Optimization',
+          'Performance Analytics & Reporting'
+        ]
+      }
+    ]
+  },
+  {
     id: 'training',
     name: 'Training Services',
     services: [
@@ -362,9 +410,9 @@ const Services = () => {
   // SEO configuration for Services page
   useEffect(() => {
     updateSEO({
-      title: 'Our Services - IT Solutions & Training | Safezone Tech',
-      description: 'Comprehensive IT solutions including cloud services, software development, cybersecurity, ICT training, and IT consulting. Tailored services to empower your business in Tanzania.',
-      keywords: 'IT services Tanzania, cloud services, software development, ICT training, cybersecurity, IT consulting, web development, network solutions, database management, Tanzania',
+      title: 'Our Services - IT Solutions, Digital Marketing & Training | Safezone Tech',
+      description: 'Comprehensive IT solutions including cloud services, software development, cybersecurity, digital marketing (SEO, Google Ads, Meta Ads), ICT training, and IT consulting. Tailored services to empower your business in Tanzania.',
+      keywords: 'IT services Tanzania, cloud services, software development, ICT training, cybersecurity, digital marketing Tanzania, SEO Tanzania, Google Ads Tanzania, Meta Ads Tanzania, IT consulting, web development, network solutions, Tanzania',
       url: window.location.href
     });
 

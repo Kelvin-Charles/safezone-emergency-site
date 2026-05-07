@@ -6,9 +6,9 @@ const Home = () => {
   // Home page specific SEO
   useEffect(() => {
     updateSEO({
-      title: 'Safezone Tech | Empowering African Businesses Through Digital Innovation',
-      description: 'Safezone Tech provides cloud services, software development, cybersecurity and ICT training to help African businesses achieve digital transformation. Located in Arusha, Tanzania.',
-      keywords: 'Safezone Tech, IT services Tanzania, cloud computing, software development Tanzania, ICT training, cybersecurity services, digital transformation Africa, IT solutions Arusha',
+      title: 'Safezone Tech | IT Solutions, Digital Marketing & Software Development in Tanzania',
+      description: 'Safezone Tech delivers cloud services, software development, digital marketing (SEO, Google Ads, Meta Ads), cybersecurity and ICT training to empower African businesses. Located in Arusha, Tanzania.',
+      keywords: 'Safezone Tech, IT services Tanzania, cloud computing, software development Tanzania, ICT training, cybersecurity, digital marketing Tanzania, SEO Tanzania, Google Ads Tanzania, Meta Ads Tanzania, digital transformation Africa, IT solutions Arusha',
       url: window.location.href
     });
 
@@ -97,144 +97,352 @@ const Home = () => {
 
       <div className="container mx-auto px-4">
         {/* Stats Section with Animated Numbers */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24">
           {[
-            { number: '10+', label: 'Projects Completed' },
-            { number: '25+', label: 'Happy Clients' },
-            { number: '50+', label: 'Trained Professionals' },
-            { number: '5+', label: 'Years Experience' }
+            { number: '20+', label: 'Projects Delivered', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' },
+            { number: '10+', label: 'Happy Clients', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z' },
+            { number: '50+', label: 'Trained Professionals', icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' },
+            { number: '5+', label: 'Years of Excellence', icon: 'M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z' }
           ].map((stat, index) => (
-            <div key={index} className="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-3">
+            <div key={index} className="group bg-white p-6 md:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 text-center border border-gray-50">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mx-auto mb-4 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={stat.icon} />
+                </svg>
+              </div>
+              <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary mb-2">
                 {stat.number}
-          </div>
-              <div className="text-gray-600 text-lg">{stat.label}</div>
-          </div>
+              </div>
+              <div className="text-gray-500 font-medium">{stat.label}</div>
+            </div>
           ))}
         </div>
 
         {/* Featured Services with Hover Effects */}
         <div className="mb-24">
-          <h2 className="text-4xl font-bold mb-16 text-center">
+          <h2 className="text-4xl font-bold mb-4 text-center">
             Our Core <span className="text-primary">Services</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <p className="text-center text-gray-500 mb-16 text-lg">End-to-end technology solutions for modern businesses</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: 'Cloud Services',
-                description: 'Expert cloud solutions to scale your business efficiently',
-                image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                description: 'Scalable cloud infrastructure, migration, and managed services to power your business 24/7',
+                image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                badge: 'Infrastructure'
               },
               {
                 title: 'Software Development',
-                description: 'Custom software solutions tailored to your unique needs',
-                image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                description: 'Custom web apps, mobile apps, and enterprise software built to your exact specifications',
+                image: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                badge: 'Development'
+              },
+              {
+                title: 'Digital Marketing',
+                description: 'SEO, Google Ads, and Meta Ads campaigns that grow your audience and drive real revenue',
+                image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                badge: 'New Service'
               },
               {
                 title: 'ICT Training',
-                description: 'Empowering professionals with cutting-edge skills',
-                image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'
+                description: 'Professional certification programs and hands-on workshops to upskill your team',
+                image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                badge: 'Training'
               }
             ].map((service, index) => (
               <div key={index} className="group relative overflow-hidden rounded-2xl shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
-                <img 
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent z-10"></div>
+                {service.badge === 'New Service' && (
+                  <div className="absolute top-4 right-4 z-20 px-3 py-1 bg-secondary text-white text-xs font-bold rounded-full shadow-lg">
+                    NEW
+                  </div>
+                )}
+                <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-[400px] object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-[380px] object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-8 z-20 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                  <p className="text-white/90 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-20 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full mb-3">{service.badge}</span>
+                  <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-white/85 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-relaxed">
                     {service.description}
                   </p>
-                  <Link 
-                    to="/services" 
-                    className="inline-flex items-center text-white hover:text-primary transition-colors"
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center text-white font-semibold hover:text-blue-300 transition-colors text-sm"
                   >
-                    Learn More 
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    Learn More
+                    <svg className="w-4 h-4 ml-1.5 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </Link>
-            </div>
-            </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Why Choose Us with Interactive Icons */}
-        <div className="mb-24 py-16 bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl">
-          <h2 className="text-4xl font-bold mb-16 text-center">
+        <div className="mb-24 py-16 bg-gradient-to-br from-gray-50 via-blue-50/30 to-gray-100 rounded-3xl">
+          <h2 className="text-4xl font-bold mb-4 text-center">
             Why Choose <span className="text-primary">Safezone Tech</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 container mx-auto px-4">
+          <p className="text-center text-gray-500 mb-16 text-lg">What sets us apart from the rest</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto px-8">
             {[
               {
                 icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
                 title: "Expert Team",
-                description: "Certified professionals with extensive industry experience"
+                description: "Certified professionals with deep industry experience across IT, security, and digital marketing",
+                color: "from-blue-500 to-primary"
               },
               {
                 icon: "M13 10V3L4 14h7v7l9-11h-7z",
                 title: "Fast Delivery",
-                description: "Quick turnaround time without compromising quality"
+                description: "Agile delivery approach ensuring quick turnaround without ever compromising on quality",
+                color: "from-primary to-indigo-600"
               },
               {
                 icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
                 title: "Security First",
-                description: "Top-tier security measures for all our solutions"
+                description: "Enterprise-grade security baked into every solution we build and every system we touch",
+                color: "from-indigo-600 to-secondary"
+              },
+              {
+                icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
+                title: "Measurable Results",
+                description: "Data-driven approach with clear KPIs and transparent reporting so you always know your ROI",
+                color: "from-secondary to-pink-500"
               }
             ].map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-block p-4 rounded-full bg-gradient-to-r from-primary to-secondary transform group-hover:scale-110 transition-transform duration-300">
+                <div className={`inline-block p-1 rounded-full bg-gradient-to-r ${feature.color} transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center">
                     <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
-                </svg>
-              </div>
-            </div>
-                <h3 className="text-2xl font-bold mt-6 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                    </svg>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mt-6 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Projects Section */}
+        <div className="mb-24">
+          <h2 className="text-4xl font-bold mb-4 text-center">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+          <p className="text-center text-gray-500 mb-16 text-lg max-w-2xl mx-auto">
+            A snapshot of the real-world solutions we've delivered for businesses across Tanzania
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                category: 'Web Development',
+                categoryColor: 'bg-blue-100 text-blue-700',
+                title: 'Elevated Tanzania Safaris — Booking & Web Platform',
+                description: 'Built a full-featured tourism website with an integrated online booking system, itinerary management, and client portal for one of Arusha\'s leading safari operators.',
+                tags: ['Web Design', 'Booking System', 'CMS'],
+                icon: 'M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+                gradient: 'from-blue-500 to-cyan-400'
+              },
+              {
+                category: 'Cloud & Infrastructure',
+                categoryColor: 'bg-purple-100 text-purple-700',
+                title: 'Tanzania Camping Safaris — Cloud Infrastructure',
+                description: 'Migrated the company\'s entire IT infrastructure to the cloud, setting up secure cloud storage, automated backups, and remote-access systems to modernize operations.',
+                tags: ['Cloud Migration', 'AWS', 'DevOps'],
+                icon: 'M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z',
+                gradient: 'from-purple-500 to-indigo-500'
+              },
+              {
+                category: 'Digital Marketing',
+                categoryColor: 'bg-orange-100 text-orange-700',
+                title: 'Migsam Safaris — Digital Growth Campaign',
+                description: 'Ran a comprehensive SEO and Meta Ads campaign that significantly boosted organic traffic, online enquiries, and brand visibility in international tourism markets.',
+                tags: ['SEO', 'Meta Ads', 'Analytics'],
+                icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+                gradient: 'from-orange-500 to-pink-500'
+              },
+              {
+                category: 'EdTech Platform',
+                categoryColor: 'bg-green-100 text-green-700',
+                title: 'JR Institute of IT — Learning Management System',
+                description: 'Developed a custom LMS for JR Institute enabling online course delivery, student tracking, certificate generation, and tutor management for ICT courses.',
+                tags: ['LMS', 'Software Dev', 'Education'],
+                icon: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+                gradient: 'from-green-500 to-teal-400'
+              },
+              {
+                category: 'Cybersecurity',
+                categoryColor: 'bg-red-100 text-red-700',
+                title: 'Gofan Safaris — Security Audit & Hardening',
+                description: 'Conducted a comprehensive cybersecurity audit, penetration testing, and implemented security hardening measures to protect client data and business operations.',
+                tags: ['Pen Testing', 'Security Audit', 'Firewall'],
+                icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
+                gradient: 'from-red-500 to-rose-400'
+              },
+              {
+                category: 'Mobile App',
+                categoryColor: 'bg-teal-100 text-teal-700',
+                title: 'Kwembe Adventures — Mobile Booking App',
+                description: 'Designed and built a cross-platform mobile app for Kwembe Adventures allowing customers to browse tours, make bookings, and manage trips from their smartphones.',
+                tags: ['React Native', 'iOS & Android', 'UX Design'],
+                icon: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
+                gradient: 'from-teal-500 to-cyan-400'
+              }
+            ].map((project, index) => (
+              <div key={index} className="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100">
+                {/* Top gradient bar */}
+                <div className={`h-1.5 bg-gradient-to-r ${project.gradient}`}></div>
+                <div className="p-6">
+                  {/* Icon + Category */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                      <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={project.icon} />
+                      </svg>
+                    </div>
+                    <span className={`text-xs font-bold px-3 py-1.5 rounded-full ${project.categoryColor}`}>{project.category}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-800 mb-3 leading-snug">{project.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-5">{project.description}</p>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, i) => (
+                      <span key={i} className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-primary hover:text-white transition-all duration-300">
+              Start Your Project
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
+        {/* Clients Section */}
+        <div className="mb-24 py-16 bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl px-8">
+          <h2 className="text-4xl font-bold mb-4 text-center">
+            Trusted by <span className="text-primary">Great Clients</span>
+          </h2>
+          <p className="text-center text-gray-500 mb-14 text-lg">Companies across Tanzania that rely on Safezone Tech</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { name: 'Elevated Tanzania Safaris', industry: 'Safari & Tourism' },
+              { name: 'Migsam Safaris', industry: 'Safari & Tourism' },
+              { name: 'Gofan Safaris', industry: 'Safari & Tourism' },
+              { name: 'Tanzania Camping Safaris', industry: 'Safari & Tourism' },
+              { name: 'Kwembe Adventures', industry: 'Adventure Tourism' },
+              { name: 'Crest Adventures', industry: 'Adventure Tourism' },
+              { name: 'Okaka Safaris', industry: 'Safari & Tourism' },
+              { name: 'Furahini Adventures', industry: 'Adventure Tourism' },
+              { name: 'JR Institute of IT', industry: 'Education' },
+              { name: 'SchoolHub', industry: 'EdTech' }
+            ].map((client, index) => (
+              <div key={index} className="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 border border-gray-100 flex flex-col items-center text-center group">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center mb-3 group-hover:from-primary/20 group-hover:to-secondary/20 transition-all duration-300">
+                  <span className="text-2xl font-black text-primary">{client.name.charAt(0)}</span>
+                </div>
+                <h4 className="text-sm font-bold text-gray-800 leading-tight mb-1">{client.name}</h4>
+                <p className="text-xs text-gray-400">{client.industry}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Digital Marketing Highlight Banner */}
+        <div className="mb-24 rounded-3xl overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1976d2] via-[#6a11cb] to-[#dc004e] opacity-90"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="relative px-8 py-14 md:py-16">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+              <div className="text-center md:text-left max-w-2xl">
+                <span className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-bold rounded-full mb-4 uppercase tracking-widest">New Service</span>
+                <h2 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+                  Grow Your Business with <br className="hidden md:block"/>Digital Marketing
+                </h2>
+                <p className="text-white/85 text-lg mb-6 leading-relaxed">
+                  We now offer full-service digital marketing — SEO, Google Ads, and Meta Ads (Facebook & Instagram) — to help you reach more customers, generate quality leads, and grow your revenue online.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+                  {['SEO Optimization', 'Google Ads', 'Meta Ads'].map((item, i) => (
+                    <span key={i} className="flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-sm text-white rounded-full text-sm font-semibold border border-white/20">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 flex-shrink-0">
+                <Link
+                  to="/services"
+                  className="px-8 py-4 bg-white text-primary font-bold rounded-full hover:shadow-xl hover:shadow-black/20 transition-all duration-300 text-center whitespace-nowrap"
+                >
+                  Explore Digital Marketing
+                </Link>
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-primary transition-all duration-300 text-center whitespace-nowrap"
+                >
+                  Get a Free Audit
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Active Products Section */}
         <div className="mb-24">
-          <h2 className="text-4xl font-bold mb-16 text-center">
+          <h2 className="text-4xl font-bold mb-4 text-center">
             Our <span className="text-primary">Active Products</span>
           </h2>
+          <p className="text-center text-gray-500 mb-16 text-lg">Homegrown software solutions built for Africa</p>
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-5xl mx-auto">
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+            {/* SchoolHub Product Card */}
+            <div className="group bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-blue-100">
+              {/* Decorative top bar */}
+              <div className="h-2 bg-gradient-to-r from-primary via-blue-400 to-secondary"></div>
+
               {/* Header Section */}
-              <div className="bg-gradient-to-r from-primary/5 via-primary/10 to-secondary/5 p-8 border-b border-gray-100">
-                <div className="flex items-start justify-between mb-4">
+              <div className="p-8 border-b border-blue-100">
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg flex-shrink-0">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-lg">
-                        <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="text-3xl font-bold text-gray-800">MatokeoChap</h3>
-                        <a 
-                          href="https://matokeochap.com/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-primary hover:text-primary/80 transition-colors inline-flex items-center text-sm font-medium"
-                        >
-                          <span className="mr-1">matokeochap.com</span>
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                          </svg>
-                        </a>
-                      </div>
+                    <div className="flex items-center gap-3 mb-2 flex-wrap">
+                      <h3 className="text-3xl font-bold text-gray-800">SchoolHub</h3>
+                      <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold uppercase tracking-wide">Live</span>
                     </div>
+                    <a
+                      href="https://schoolhub.ac.tz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:text-primary/80 transition-colors inline-flex items-center text-sm font-medium mb-4"
+                    >
+                      <span className="mr-1">schoolhub.ac.tz</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
                     <p className="text-gray-700 leading-relaxed text-lg">
-                      <strong>Your One-Stop Platform for All Academic Information in Tanzania</strong> - Say goodbye to scrolling through thousands of schools on official NECTA pages! MatokeoChap simplifies academic information access, helping students and parents find results, selections, and educational data instantly.
+                      <strong>Tanzania's Complete School Management & Academic Platform</strong> — SchoolHub empowers schools, students, and parents with a modern digital hub for academic records, results, timetables, and school administration — all in one place.
                     </p>
                   </div>
                 </div>
@@ -251,125 +459,96 @@ const Home = () => {
                     Key Features
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="flex items-start p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
+                    {[
+                      {
+                        icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
+                        title: "Student Results Portal",
+                        desc: "Instant access to NECTA exam results for students across all levels — PSLE, CSEE, ACSEE",
+                        color: "primary"
+                      },
+                      {
+                        icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4",
+                        title: "School Management",
+                        desc: "Complete admin tools for schools — manage classes, teachers, timetables and student records",
+                        color: "primary"
+                      },
+                      {
+                        icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+                        title: "Selection & Placement",
+                        desc: "Check Form One, Form Five, and College placement selections in real time",
+                        color: "primary"
+                      },
+                      {
+                        icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+                        title: "Academic Reports",
+                        desc: "Generate and download detailed academic reports and transcripts for any student",
+                        color: "primary"
+                      },
+                      {
+                        icon: "M13 10V3L4 14h7v7l9-11h-7z",
+                        title: "AI Course Advisor",
+                        desc: "AI-powered subject combination recommendations based on CSEE performance",
+                        color: "purple",
+                        purple: true
+                      },
+                      {
+                        icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+                        title: "Instant Search",
+                        desc: "Find any student or school by index number or school code — fast and accurate",
+                        color: "primary"
+                      }
+                    ].map((feature, i) => (
+                      <div key={i} className={`flex items-start p-4 rounded-xl hover:scale-[1.02] transition-transform duration-200 ${feature.purple ? 'bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-100' : 'bg-primary/5 hover:bg-primary/10'}`}>
+                        <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center mr-3 ${feature.purple ? 'bg-gradient-to-br from-purple-500 to-pink-500' : 'bg-primary/20'}`}>
+                          <svg className={`w-5 h-5 ${feature.purple ? 'text-white' : 'text-primary'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
+                          </svg>
+                        </div>
+                        <div>
+                          <h5 className="font-semibold text-gray-800 mb-1">{feature.title}</h5>
+                          <p className="text-sm text-gray-600">{feature.desc}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-1">Student Results</h5>
-                        <p className="text-sm text-gray-600">Check individual student examination results across all NECTA exams instantly</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-1">School Results</h5>
-                        <p className="text-sm text-gray-600">View comprehensive results for all students in any school across Tanzania</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-1">Selection Check</h5>
-                        <p className="text-sm text-gray-600">Check Form One and Form Five/College selection status instantly</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-1">JKT Selection</h5>
-                        <p className="text-sm text-gray-600">Check your JKT (National Service) selection status for Form 6 students</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg hover:from-purple-100 hover:to-pink-100 transition-colors border border-purple-100">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mr-3">
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-1">AI-Powered Course Suggestions</h5>
-                        <p className="text-sm text-gray-600">Get personalized Form 5 subject combination recommendations based on your CSEE results</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start p-4 bg-primary/5 rounded-lg hover:bg-primary/10 transition-colors">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center mr-3">
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold text-gray-800 mb-1">Quick Search</h5>
-                        <p className="text-sm text-gray-600">Find information by school number or exam number - no more endless scrolling!</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
 
-                {/* Why Choose MatokeoChap */}
-                <div className="mb-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl border border-primary/20">
-                  <h4 className="text-lg font-bold text-gray-800 mb-4">Why Choose MatokeoChap?</h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong>Save Time:</strong> Access all academic information in one place instead of navigating multiple official pages</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong>Easy Access:</strong> Search by school number or exam number - no need to scroll through thousands of schools</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong>Complete Information:</strong> Get results, selections, and all NECTA-related information in one platform</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span><strong>Smart Recommendations:</strong> AI-powered course suggestions to help you choose the best Form 5 subjects</span>
-                    </li>
+                {/* Why SchoolHub */}
+                <div className="mb-8 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl border border-primary/20">
+                  <h4 className="text-lg font-bold text-gray-800 mb-4">Why SchoolHub?</h4>
+                  <ul className="space-y-3 text-gray-700">
+                    {[
+                      { label: 'One Platform', desc: 'Schools, students, and parents all in one place — no more switching between multiple portals' },
+                      { label: 'Built for Tanzania', desc: 'Designed around the Tanzanian education system — NECTA, PSLE, CSEE, ACSEE fully integrated' },
+                      { label: 'Real-Time Data', desc: 'Results and selections updated in real time so you\'re always the first to know' },
+                      { label: 'Smart AI Features', desc: 'AI advisor helps students pick the right subjects and career paths after exams' }
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start">
+                        <svg className="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span><strong>{item.label}:</strong> {item.desc}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-3 mb-6">
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Academic Results</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">School Search</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">NECTA Integration</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Selection Info</span>
-                  <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">AI Recommendations</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">JKT Check</span>
+                <div className="flex flex-wrap gap-3 mb-8">
+                  {['School Management', 'Academic Results', 'NECTA Integration', 'Selection Check', 'AI Advisor', 'Tanzania EdTech'].map((tag, i) => (
+                    <span key={i} className={`px-4 py-2 rounded-full text-sm font-medium ${i === 4 ? 'bg-purple-100 text-purple-700' : 'bg-primary/10 text-primary'}`}>{tag}</span>
+                  ))}
                 </div>
 
                 {/* CTA Button */}
                 <a
-                  href="https://matokeochap.com/"
+                  href="https://schoolhub.ac.tz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-lg font-bold text-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white rounded-xl font-bold text-lg hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                 >
-                  Visit MatokeoChap Now
-                  <svg className="w-6 h-6 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  Visit SchoolHub
+                  <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
                 </a>
@@ -506,24 +685,27 @@ const Home = () => {
         {/* CTA Section with Gradient Background */}
         <div className="relative overflow-hidden rounded-3xl mb-24">
           <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90"></div>
-          <div className="relative px-8 py-16 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-              Let's discuss how we can help you achieve your technology goals
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="relative px-8 py-20 text-center">
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+              Ready to Grow Your Business?
+            </h2>
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+              Whether you need software built, your cloud modernized, or your marketing scaled — Safezone Tech is your trusted partner in Arusha and beyond.
             </p>
-            <div className="space-x-6">
-            <Link 
-              to="/booking" 
-                className="bg-white text-primary px-10 py-4 rounded-full hover:shadow-lg hover:shadow-black/20 transition-all duration-300 inline-block"
-            >
-              Book a Consultation
-            </Link>
-            <Link 
-              to="/contact" 
-                className="border-2 border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-primary transition-all duration-300 inline-block"
-            >
-              Contact Us
-            </Link>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/booking"
+                className="bg-white text-primary px-10 py-4 rounded-full font-bold hover:shadow-xl hover:shadow-black/20 transition-all duration-300 inline-block hover:-translate-y-1"
+              >
+                Book a Free Consultation
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all duration-300 inline-block hover:-translate-y-1"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>

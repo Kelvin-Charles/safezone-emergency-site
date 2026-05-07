@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import DigitalMarketing from './pages/DigitalMarketing';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Booking from './pages/Booking';
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/news" component={News} />
             <Route path="/news/:articleId" component={News} />
             <Route path="/services" component={Services} />
+            <Route path="/digital-marketing" component={DigitalMarketing} />
             <Route path="/contact" component={Contact} />
             <Route path="/booking" component={Booking} />
             <Route path="/admin" component={Admin} />
